@@ -1,0 +1,10 @@
+C:\Users\megha\source\repos\AdvanceSoftwearEngineering\AdvanceSoftware\bin\Debug\AdvanceSoftware.exe.config
+C:\Users\megha\source\repos\AdvanceSoftwearEngineering\AdvanceSoftware\bin\Debug\AdvanceSoftware.exe
+C:\Users\megha\source\repos\AdvanceSoftwearEngineering\AdvanceSoftware\bin\Debug\AdvanceSoftware.pdb
+C:\Users\megha\source\repos\AdvanceSoftwearEngineering\AdvanceSoftware\obj\Debug\AdvanceSoftware.csproj.AssemblyReference.cache
+C:\Users\megha\source\repos\AdvanceSoftwearEngineering\AdvanceSoftware\obj\Debug\AdvanceSoftware.Form1.resources
+C:\Users\megha\source\repos\AdvanceSoftwearEngineering\AdvanceSoftware\obj\Debug\AdvanceSoftware.Properties.Resources.resources
+C:\Users\megha\source\repos\AdvanceSoftwearEngineering\AdvanceSoftware\obj\Debug\AdvanceSoftware.csproj.GenerateResource.cache
+C:\Users\megha\source\repos\AdvanceSoftwearEngineering\AdvanceSoftware\obj\Debug\AdvanceSoftware.csproj.CoreCompileInputs.cache
+C:\Users\megha\source\repos\AdvanceSoftwearEngineering\AdvanceSoftware\obj\Debug\AdvanceSoftware.exe
+C:\Users\megha\source\repos\AdvanceSoftwearEngineering\AdvanceSoftware\obj\Debug\AdvanceSoftware.pdb
