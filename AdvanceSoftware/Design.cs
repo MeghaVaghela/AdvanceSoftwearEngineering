@@ -47,11 +47,52 @@ namespace AdvanceSoftware
             catch(Exception ex)
             {
                 PrintMessage(ex.Message);
-                DesignValues.isUnitTestValid=false;
+                DesignValues.isUnitTestValid = false;   
             }
-
+        }
+        public void DrawCircle(int width)
+        {
+            try
+            {
+                int x_pos = x - (width / 2);
+                int y_pos = y - (width / 2);
+                Current_Shape = new Rectangle(x_pos, y_pos, width, width);
+                if(DesignValues.isFill)
+                {
+                    this.graph.FillEllipse(DesignValues.fillColour, Current_Shape);
+                    this.graph.DrawEllipse(pen, x_pos, y_pos, width, width);
+                    DesignValues.isUnitTestValid = true;    
+                }
+            }
+            catch (Exception ex)
+            {
+                PrintMessage(ex.Message);
+                DesignValues.isUnitTestValid = false;
+            }
         }
 
+        public  void DrawLine(int x_pos, int y_pos)
+        {
+            try
+            {
+                if (DesignValues.isFill)
+                {
+                    pen = new Pen(DesignValues.pointerColor, 1);
+                    this.graph.DrawLine(pen, x, y, x_pos, y_pos);
+                }
+                else
+                {
+                    this.graph.DrawLine(pen, x, y, x_pos, y_pos);
+                    pen = new Pen(Color.Gray, 1);
+                    DesignValues.isUnitTestValid = true;
+                }
+            }
+            catch(Exception ex)
+            {
+                PrintMessage(ex.Message);
+                DesignValues.isUnitTestValid= false;
+            }
+        }
         public void PrintMessage(string Error_Message) 
         {
             using(Font MyFont = new Font("Arial", 9))
