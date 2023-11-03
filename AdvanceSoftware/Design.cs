@@ -131,6 +131,50 @@ namespace AdvanceSoftware
                 DesignValues.isUnitTestValid=false;
             }
         }
+        public void DrawTriangle(int x_pos,int y_pos, int z_pos)
+        {
+            try
+            {
+                int tx, ty, cx, cy;
+                cx = Convert.ToInt32(x - (x_pos / 3));
+                cy = Convert.ToInt32(y - (y_pos / 3));
+                tx = Convert.ToInt32(cx + x_pos);
+                ty = Convert.ToInt32(cy + y_pos);
+
+                Point[] point = new Point[3];
+                point[0] = new Point(cx, cy);
+                point[1] = new Point(tx, cy);
+                point[2] = new Point(cx, ty);
+
+                if (DesignValues.isFill)
+                    this.graph.FillPolygon(DesignValues.fillColour, point);
+                this.graph.DrawPolygon(pen,point);
+                DesignValues.isUnitTestValid = true;
+            }
+            catch (Exception ex)
+            {
+                PrintMessage(ex.Message);
+                DesignValues.isUnitTestValid=false;
+            }
+        }
+        public void Current_Point(Boolean flag)
+        {
+            pen = new Pen(Color.Black,2);
+            if (flag)
+            {
+                Current_Position = GetRectangle(DesignValues.x, DesignValues.y, 2, 2);
+                this.graph.DrawRectangle(pen,Current_Position);
+            }
+            else
+            {
+                x = y = 0;
+                DesignValues.x=DesignValues.y=0;
+                Current_Position=GetRectangle(x, y, 2, 2);
+                this.graph.DrawRectangle(pen, Current_Position);
+            }
+            pen = new Pen(Color.Gray,2);
+        }
+
         public void PrintMessage(string Error_Message) 
         {
             using(Font MyFont = new Font("Arial", 9))
