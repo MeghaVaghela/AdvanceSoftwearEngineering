@@ -7,9 +7,13 @@ using System.Threading.Tasks;
 
 namespace AdvanceSoftware
 {
-    internal class DesignControl : Design
+    public class DesignControl : Design
     {
-     
+        public void MovePoint(int v)
+        {
+            throw new NotImplementedException();
+        }
+
         public void runCommands(String strtxt)
         {
             string errMsg = string.Empty;

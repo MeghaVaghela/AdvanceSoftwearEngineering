@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AdvanceSoftware
 {
-    internal class DesignValues
+    public class DesignValues
     {
         // variable declaration.
         // Initialize a new Bitmap with dimensions 60x480 pixels for drawing.

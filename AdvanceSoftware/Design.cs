@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AdvanceSoftware
 {
-    internal class Design
+    public class Design
     {
         //Graphics variable to execute graphics fuction
         Graphics graph;
