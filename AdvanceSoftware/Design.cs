@@ -100,7 +100,7 @@ namespace AdvanceSoftware
                 {
                     this.graph.DrawLine(pen, x, y, x_pos, y_pos);
                     // Reset the pen color to gray
-                    pen = new Pen(Color.Gray, 1);
+                    pen = new Pen(Color.Black, 1);
                     DesignValues.isUnitTestValid = true;
                 }
             }
@@ -143,14 +143,14 @@ namespace AdvanceSoftware
                 this.graph.DrawRectangle(pen, Current_Position);
 
                 // Change the pen color and draw the new point
-                pen = new Pen(Color.Blue,2);
+                pen = new Pen(Color.Red,2);
                 Current_Position = GetRectangle(x_pos, y_pos, 2, 2);
                 this.graph.DrawRectangle(pen, Current_Position);
 
                 // Update the current coordinates and reset the pen color
                 x = DesignValues.x = x_pos;
                 y = DesignValues.y = y_pos;
-                pen = new Pen(Color.Gray, 1);
+                pen = new Pen(Color.Black, 1);
                 DesignValues.isUnitTestValid = true;
             }
             catch(Exception ex)
