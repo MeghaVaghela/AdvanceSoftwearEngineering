@@ -94,33 +94,34 @@ namespace AdvanceSoftware
                                     j = j + 2;
                                 }
                             }
-                            else if (oneCommand[j].ToString().Trim().Equals("circle"))
+                        else if (oneCommand[j].ToString().Trim().Equals("circle"))
+                        {
+                            if (oneCommand.Count() != 2)
                             {
-                                if (oneCommand.Count() != 2)
-                                {
-                                    errMsg = errMsg + "invalid number of parameters for circle " + (i + 1).ToString() + "\n";
-                                    runFlg = false;
-                                    break;
-                                }
-                                else 
-                                {
-                                    if (checkNumber(oneCommand[j + 1].Trim(), ref cmdX))
-                                    {
-                                        if (runFlg)
-                                        {
-                                            DrawCircle(cmdX);
-                                        }
-                                    }
-                                    else
-                                    {
-                                        errMsg = errMsg + " Non numeric parameter " + (i + 1).ToString() + "\n";
-                                        runFlg = false;
-                                    }
-                                    j = j + 1;
-                                }
+                                errMsg = errMsg + "invalid number of parameters for circle " + (i + 1).ToString() + "\n";
+                                runFlg = false;
+                                break;
                             }
+                            else
+                            {
+                                if (checkNumber(oneCommand[j + 1].Trim(), ref cmdX))
+                                {
+                                    if (runFlg)
+                                    {
+                                        DrawCircle(cmdX);
+                                    }
+                                }
+                                else
+                                {
+                                    errMsg = errMsg + " Non numeric parameter " + (i + 1).ToString() + "\n";
+                                    runFlg = false;
+                                }
+                                j = j + 1;
+                            }
+                        }
 
-                            else if (oneCommand[j].ToString().Trim().Equals("pen"))
+
+                        else if (oneCommand[j].ToString().Trim().Equals("pen"))
                             {
                                 if (oneCommand.Count() != 2)
                                 {

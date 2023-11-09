@@ -82,18 +82,13 @@ namespace AdvanceSoftware
         {
             try
             {
-                // Calculate the position for the circle
                 int x_pos = x - (width / 2);
                 int y_pos = y - (width / 2);
                 Current_Shape = new Rectangle(x_pos, y_pos, width, width);
-
-                // Check if filling is enabled
                 if (DesignValues.isFill)
-                {
                     this.graph.FillEllipse(DesignValues.fillColour, Current_Shape);
-                    this.graph.DrawEllipse(pen, x_pos, y_pos, width, width);
-                    DesignValues.isUnitTestValid = true;    
-                }
+                this.graph.DrawEllipse(pen, x_pos, y_pos, width, width);
+                DesignValues.isUnitTestValid = true;
             }
             catch (Exception ex)
             {

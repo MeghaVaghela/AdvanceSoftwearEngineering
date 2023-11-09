@@ -118,5 +118,18 @@ namespace AdvanceSoftware
             d.Current_Point(false);
             Refresh();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog save = new SaveFileDialog();
+            save.Filter = "JPEG|*.jpeg";
+            save.Title = "Assingmemnt";
+            save.ShowDialog();
+
+            if (save.FileName != "" && DesignValues.newPic != null)
+            {
+                DesignValues.newPic.Save(save.FileName);
+            }
+        }
     }
 }

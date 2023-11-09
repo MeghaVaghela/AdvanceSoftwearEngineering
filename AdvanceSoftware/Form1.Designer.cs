@@ -37,6 +37,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -45,7 +46,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(535, 511);
+            this.button1.Location = new System.Drawing.Point(545, 511);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(105, 43);
             this.button1.TabIndex = 0;
@@ -55,7 +56,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(727, 511);
+            this.button2.Location = new System.Drawing.Point(805, 511);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(100, 43);
             this.button2.TabIndex = 1;
@@ -103,7 +104,6 @@
             this.textBox2.Size = new System.Drawing.Size(436, 22);
             this.textBox2.TabIndex = 6;
             this.textBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox2_KeyDown);
-
             // 
             // groupBox1
             // 
@@ -135,11 +135,22 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Single Line Command";
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(683, 511);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(100, 43);
+            this.button4.TabIndex = 10;
+            this.button4.Text = "Save";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1029, 576);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -169,6 +180,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button button4;
     }
 }
 
