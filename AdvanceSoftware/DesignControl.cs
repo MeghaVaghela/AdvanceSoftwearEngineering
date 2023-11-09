@@ -7,12 +7,24 @@ using System.Threading.Tasks;
 
 namespace AdvanceSoftware
 {
+    /// <summary>
+    /// The `DesignControl` class extends the base `Design` class and serves as a command parser for processing drawing commands.
+    /// It interprets a sequence of text-based drawing commands, performs the corresponding drawing actions,
+    /// and provides error messages when necessary. This class allows users to create drawings by providing simple text instructions.
+    /// </summary>
     public class DesignControl : Design
     {
-      
+        /// <summary>
+        /// Processes a sequence of drawing commands provided as a string.
+        /// The input string should contain a series of commands separated by semicolons.
+        /// This method interprets each command, executes the associated drawing action, and handles any errors.
+        /// </summary>
+        /// <param name="strtxt">The input string containing drawing commands.</param>
+
 
         public void runCommands(String strtxt)
         {
+
             string errMsg = string.Empty;
             string strCommand = string.Empty;
             Boolean runFlg = true;
@@ -270,6 +282,14 @@ namespace AdvanceSoftware
                     Current_Point(true);
                 }
         }
+
+        /// <summary>
+        /// Checks if a given string represents a valid integer and assigns its value to the provided integer variable.
+        /// </summary>
+        /// <param name="no">The string to be checked for a valid integer.</param>
+        /// <param name="val">An integer variable to store the parsed value if the string is a valid integer.</param>
+        /// <returns>True if the provided string represents a valid integer; otherwise, false.</returns>
+
         private Boolean checkNumber(string no, ref int val)
         {
              Boolean isNumber = false;
