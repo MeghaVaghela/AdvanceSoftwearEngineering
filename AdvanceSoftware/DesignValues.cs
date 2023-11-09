@@ -5,8 +5,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
+/// <summary>
+/// This class represents a collection of design-related values and settings used for drawing.
+/// </summary>
 namespace AdvanceSoftware
 {
+
+    /// <summary>
+    /// A class that holds various design-related values and settings for drawing.
+    /// </summary>
     public class DesignValues
     {
         // variable declaration.
@@ -23,6 +31,10 @@ namespace AdvanceSoftware
         // Store the color for a pointer or cursor.
         static Color _pointerColor;
 
+
+        /// <summary>
+        /// Gets or sets the Bitmap used for drawing, initialized with dimensions 640x480 pixels.
+        /// </summary>
         public static Bitmap newPic
         {
             get
@@ -32,18 +44,30 @@ namespace AdvanceSoftware
             set { _newPic = value; }
         }
 
+
+        /// <summary>
+        /// Gets or sets the X-coordinate of the current position.
+        /// </summary>
         public static int x
         {
             get { return _x; }  
             set { _x = value; }
         }
 
+
+        /// <summary>
+        /// Gets or sets the Y-coordinate of the current position.
+        /// </summary>
         public static int y
         {
             get { return _y; }
             set { _y = value; }
         }
 
+
+        /// <summary>
+        /// Gets or sets the SolidBrush used for filling shapes with color.
+        /// </summary>
         public static SolidBrush fillColour
         {
             get {
@@ -52,6 +76,10 @@ namespace AdvanceSoftware
         }
 
 
+
+        /// <summary>
+        /// Gets or sets a flag to determine if filling is enabled for shapes.
+        /// </summary>
         public static Boolean isUnitTestValid
         {
             get
@@ -63,6 +91,10 @@ namespace AdvanceSoftware
                 _isUnitTestValid = value;
             }
         }
+
+        /// <summary>
+        /// Gets or sets a flag to indicate if the unit test is valid or not.
+        /// </summary>
         public static Color pointerColor
         {
             get
@@ -71,6 +103,10 @@ namespace AdvanceSoftware
             }
             set { _pointerColor = value; }
         }
+
+        /// <summary>
+        /// Gets or sets the color for a pointer or cursor.
+        /// </summary>
         public static Boolean isFill
         {
             get

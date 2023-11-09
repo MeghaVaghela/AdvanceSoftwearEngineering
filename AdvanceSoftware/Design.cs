@@ -20,6 +20,11 @@ namespace AdvanceSoftware
         //declare current shape recangle to for getting current shape
         Rectangle Current_Shape;
 
+
+
+        /// <summary>
+        /// Represents a class for creating and manipulating designs.
+        /// </summary>
         public Design()
         {
             // Initialize the graphics object with a new image from DesignValues.newPic
@@ -59,6 +64,19 @@ namespace AdvanceSoftware
             }
         }
 
+
+
+        /// <summary>
+        /// Draws a filled or outlined circle on the design canvas.
+        /// </summary>
+        /// <param name="width">The diameter of the circle to be drawn.</param>
+        /// <remarks>
+        /// This method calculates the position for the circle, taking into account the current pointer coordinates (x, y) and the specified width. 
+        /// It allows for both filled and outlined circles based on the <see cref="DesignValues.isFill"/> flag.
+        /// If filling is enabled, it fills the circle with the specified fill colour and outlines it with the current pen colour.
+        /// If an exception occurs during the drawing process, it prints an error message.
+        /// </remarks>
+        /// <param name="width">The diameter of the circle to be drawn.</param>
         // Draw a filled or outlined circle
         public void DrawCircle(int width)
         {
@@ -85,6 +103,22 @@ namespace AdvanceSoftware
             }
         }
 
+
+
+
+        /// <summary>
+        /// Draws a line on the design canvas from the current position (x, y) to the specified coordinates (x_pos, y_pos).
+        /// </summary>
+        /// <param name="x_pos">The x-coordinate of the ending point of the line.</param>
+        /// <param name="y_pos">The y-coordinate of the ending point of the line.</param>
+        /// <remarks>
+        /// This method allows for drawing lines with different colours based on the <see cref="DesignValues.isFill"/> flag. 
+        /// If filling is enabled, it sets the pen colour to the specified pointer colour, draws the line, and then resets the pen colour to gray.
+        /// If filling is disabled, it draws the line using the current pen colour.
+        /// Any exceptions that occur during the drawing process are handled, and an error message is printed if needed.
+        /// </remarks>
+        /// <param name="x_pos">The x-coordinate of the ending point of the line.</param>
+        /// <param name="y_pos">The y-coordinate of the ending point of the line.</param>
         // Draw a line from the current position to the specified coordinates
         public void DrawLine(int x_pos, int y_pos)
         {
@@ -112,6 +146,21 @@ namespace AdvanceSoftware
             }
         }
 
+
+        /// <summary>
+        /// Draws a rectangle on the design canvas with the specified width and height.
+        /// </summary>
+        /// <param name="width">The width of the rectangle.</param>
+        /// <param name="height">The height of the rectangle.</param>
+        /// <remarks>
+        /// This method calculates the position of the rectangle based on the current coordinates (x, y) and the provided width and height.
+        /// It then checks if filling is enabled using the <see cref="DesignValues.isFill"/> flag.
+        /// If filling is enabled, it fills the rectangle with the specified fill colour and draws an outline using the current pen.
+        /// If filling is disabled, it only draws the outline of the rectangle.
+        /// Any exceptions that occur during the drawing process are handled, and an error message is printed if needed.
+        /// </remarks>
+        /// <param name="width">The width of the rectangle.</param>
+        /// <param name="height">The height of the rectangle.</param>
         public void DrawRectangle(int width, int height)
         {
             try

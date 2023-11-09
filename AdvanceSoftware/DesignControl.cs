@@ -9,10 +9,7 @@ namespace AdvanceSoftware
 {
     public class DesignControl : Design
     {
-        public void MovePoint(int v)
-        {
-            throw new NotImplementedException();
-        }
+      
 
         public void runCommands(String strtxt)
         {
@@ -105,7 +102,7 @@ namespace AdvanceSoftware
                                     runFlg = false;
                                     break;
                                 }
-                                else
+                                else 
                                 {
                                     if (checkNumber(oneCommand[j + 1].Trim(), ref cmdX))
                                     {

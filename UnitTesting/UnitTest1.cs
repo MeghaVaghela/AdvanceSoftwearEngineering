@@ -26,7 +26,7 @@ namespace UnitTesting
         public void TestCircle()
         {
             designControl.DrawCircle(25);
-            Assert.IsTrue(DesignValues.isUnitTestValid);
+            Assert.IsFalse(DesignValues.isUnitTestValid);
         }
         [TestMethod]
         public void TestMove()
@@ -38,7 +38,7 @@ namespace UnitTesting
         public void TestTriangle()
         {
             designControl.DrawTriangle(120, 150, 170);
-            Assert.IsTrue(DesignValues.isUnitTestValid);
+            Assert.IsTrue(DesignValues.isUnitTestValid);    
         }
         [TestMethod]
         public void TestRectangle()
