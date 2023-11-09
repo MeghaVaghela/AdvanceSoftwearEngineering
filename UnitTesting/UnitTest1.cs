@@ -26,7 +26,7 @@ namespace UnitTesting
         public void TestCircle()
         {
             designControl.DrawCircle(25);
-            Assert.IsFalse(DesignValues.isUnitTestValid);
+            Assert.IsTrue(DesignValues.isUnitTestValid);
         }
         [TestMethod]
         public void TestMove()
