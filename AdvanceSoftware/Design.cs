@@ -43,19 +43,17 @@ namespace AdvanceSoftware
             try
             {
                 // Calculate the position for the square
-                int x_pos = x - (width / 2);
-                int y_pos = y - (width / 2);
-                Current_Shape = new Rectangle(x_pos, y_pos, width, width);
-
+                int xpos = x - (width / 2);
+                int ypos = y - (width / 2);
+                Current_Shape = new Rectangle(xpos, ypos, width, width);
+                
                 // Check if filling is enabled
-                if (DesignValues.isFill) 
-                {
+                if (DesignValues.isFill)
                     this.graph.FillRectangle(DesignValues.fillColour, Current_Shape);
-                    this.graph.DrawRectangle(pen, Current_Shape);
-                    DesignValues.isUnitTestValid = true;
-                }
-
+                this.graph.DrawRectangle(pen, Current_Shape);
+                DesignValues.isUnitTestValid = true;
             }
+            
             catch(Exception ex)
             {
                 // Handle any exceptions and print an error message
