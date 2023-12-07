@@ -94,7 +94,7 @@ namespace AdvanceSoftware
             pictureBox1.Image = DesignValues.newPic;
         }
 
-        private void textBox2_KeyDown(object sender, KeyEventArgs e)
+        private void textBox2_KeyDown(object sender, KeyEventArgs e)    
         {
             if (e.KeyCode == Keys.Enter)
             {
