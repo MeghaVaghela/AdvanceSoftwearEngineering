@@ -1,0 +1,4 @@
+C:\Users\megha\source\repos\AdvanceSoftwearEngineering\ASE_Part_2\obj\Debug\net6.0-windows\MainWindow.g.vb
+C:\Users\megha\source\repos\AdvanceSoftwearEngineering\ASE_Part_2\obj\Debug\net6.0-windows\Application.g.vb
+C:\Users\megha\source\repos\AdvanceSoftwearEngineering\ASE_Part_2\obj\Debug\net6.0-windows\ASE_Part_2_MarkupCompile.cache
+C:\Users\megha\source\repos\AdvanceSoftwearEngineering\ASE_Part_2\obj\Debug\net6.0-windows\ASE_Part_2_MarkupCompile.lref
