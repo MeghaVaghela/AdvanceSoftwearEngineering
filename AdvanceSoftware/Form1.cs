@@ -131,5 +131,10 @@ namespace AdvanceSoftware
                 DesignValues.newPic.Save(save.FileName);
             }
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

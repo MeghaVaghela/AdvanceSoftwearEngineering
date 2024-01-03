@@ -1,0 +1,16 @@
+C:\Users\megha\source\repos\AdvanceSoftwearEngineering\ASE_Part_2\bin\Debug\net6.0-windows\ASE_Part_2.exe
+C:\Users\megha\source\repos\AdvanceSoftwearEngineering\ASE_Part_2\bin\Debug\net6.0-windows\ASE_Part_2.deps.json
+C:\Users\megha\source\repos\AdvanceSoftwearEngineering\ASE_Part_2\bin\Debug\net6.0-windows\ASE_Part_2.runtimeconfig.json
+C:\Users\megha\source\repos\AdvanceSoftwearEngineering\ASE_Part_2\bin\Debug\net6.0-windows\ASE_Part_2.dll
+C:\Users\megha\source\repos\AdvanceSoftwearEngineering\ASE_Part_2\bin\Debug\net6.0-windows\ASE_Part_2.pdb
+C:\Users\megha\source\repos\AdvanceSoftwearEngineering\ASE_Part_2\obj\Debug\net6.0-windows\ASE_Part_2.Form1.resources
+C:\Users\megha\source\repos\AdvanceSoftwearEngineering\ASE_Part_2\obj\Debug\net6.0-windows\ASE_Part_2.csproj.GenerateResource.cache
+C:\Users\megha\source\repos\AdvanceSoftwearEngineering\ASE_Part_2\obj\Debug\net6.0-windows\ASE_Part_2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\megha\source\repos\AdvanceSoftwearEngineering\ASE_Part_2\obj\Debug\net6.0-windows\ASE_Part_2.AssemblyInfoInputs.cache
+C:\Users\megha\source\repos\AdvanceSoftwearEngineering\ASE_Part_2\obj\Debug\net6.0-windows\ASE_Part_2.AssemblyInfo.cs
+C:\Users\megha\source\repos\AdvanceSoftwearEngineering\ASE_Part_2\obj\Debug\net6.0-windows\ASE_Part_2.csproj.CoreCompileInputs.cache
+C:\Users\megha\source\repos\AdvanceSoftwearEngineering\ASE_Part_2\obj\Debug\net6.0-windows\ASE_Part_2.dll
+C:\Users\megha\source\repos\AdvanceSoftwearEngineering\ASE_Part_2\obj\Debug\net6.0-windows\refint\ASE_Part_2.dll
+C:\Users\megha\source\repos\AdvanceSoftwearEngineering\ASE_Part_2\obj\Debug\net6.0-windows\ASE_Part_2.pdb
+C:\Users\megha\source\repos\AdvanceSoftwearEngineering\ASE_Part_2\obj\Debug\net6.0-windows\ASE_Part_2.genruntimeconfig.cache
+C:\Users\megha\source\repos\AdvanceSoftwearEngineering\ASE_Part_2\obj\Debug\net6.0-windows\ref\ASE_Part_2.dll
