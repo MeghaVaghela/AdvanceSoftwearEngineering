@@ -8,5 +8,6 @@ namespace ASE_Part_2
 {
     internal class Design
     {
+
     }
 }
