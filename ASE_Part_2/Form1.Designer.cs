@@ -101,7 +101,7 @@
             // pictureBox1
             // 
             pictureBox1.BackColor = SystemColors.ButtonFace;
-            pictureBox1.Location = new Point(6, 26);
+            pictureBox1.Location = new Point(6, 25);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(486, 561);
             pictureBox1.TabIndex = 6;
