@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ASE_Part_2
 {
-    internal class drawRectangle
+    public class drawRectangle
     {
         private int width;
         private int height;
