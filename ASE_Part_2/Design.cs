@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ASE_Part_2
 {
-    public class Design
+    public abstract class Design:designInterface
     {
         protected int x,y;
 

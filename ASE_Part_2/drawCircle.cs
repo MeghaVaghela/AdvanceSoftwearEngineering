@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ASE_Part_2
 {
-    public class drawCircle 
+    public class drawCircle:Design
     {
         int diameter;
 

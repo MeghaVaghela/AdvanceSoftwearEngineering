@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace ASE_Part_2
 {
-    public class designInterface
+    interface designInterface
     {
+        void set(params int[] list);
+
+        void setTriangle(int x, int y, Point[] points);
+
+        void Draw(Graphics graph, Pen pen, Brush brush);
     }
 }

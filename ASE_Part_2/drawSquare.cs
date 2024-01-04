@@ -6,9 +6,13 @@ using System.Threading.Tasks;
 
 namespace ASE_Part_2
 {
-    public class drawSquare
+    public class drawSquare:drawRectangle
     {
         readonly int size;
+
+        public drawSquare()
+        {
+        }
 
         public drawSquare(int x, int y,int size): base(x,y,size,size)
         {

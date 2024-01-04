@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ASE_Part_2
 {
-    public class drawTriangle
+    public class drawTriangle:Design
     {
         private Point[] point;
 

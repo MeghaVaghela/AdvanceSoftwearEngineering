@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ASE_Part_2
 {
-    public class drawRectangle
+    public class drawRectangle:Design
     {
         private int width;
         private int height;
@@ -28,8 +28,8 @@ namespace ASE_Part_2
 
         public override void Draw(Graphics graph, Pen pen, Brush brush)
         {
-            graph.FillRectangle(brush, this.width, this.height);
-            graph.DrawRectangle(pen, this.width, this.height);
+            graph.FillRectangle(brush, x,y,width,height);
+            graph.DrawRectangle(pen, x,y,width,height);
         }
 
     }
