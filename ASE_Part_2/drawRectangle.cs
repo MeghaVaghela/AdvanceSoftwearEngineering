@@ -19,7 +19,7 @@ namespace ASE_Part_2
 
         public drawRectangle() { }
 
-        public override void set(Parameter int[] list)
+        public override void set(params int[] list)
         {
             base.set(list[0], list[1]);
             this.width = width;

@@ -27,7 +27,7 @@ namespace ASE_Part_2
             graph.DrawEllipse(Pen, x, y, diameter * 2, diameter * 2);
         }
 
-        public override void set(Parameter int[] list)
+        public override void set(params int[] list)
         {
             base.set(list[0], list[1]);
             this.diameter = list[2];
