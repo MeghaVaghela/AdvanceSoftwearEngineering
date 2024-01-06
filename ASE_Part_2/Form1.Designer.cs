@@ -52,6 +52,7 @@
             runButton.TabIndex = 0;
             runButton.Text = "Run";
             runButton.UseVisualStyleBackColor = true;
+            runButton.Click += runButton_Click;
             // 
             // button2
             // 
