@@ -42,6 +42,9 @@ namespace ASE_Part_2
         private Design Design1;
         private designFactory designFactory = new designFactory();
         private object display;
+        private object commandline;
+
+        public object ControlePanel { get; private set; }
 
         public Form1()
         {
@@ -136,14 +139,14 @@ namespace ASE_Part_2
                             {
                                 point1 = varCall(split[1]);
                                 point2 = varCall(split[2]);
-                                g.DrawLine(pen, x, y, point1, point1);
+                                graph.DrawLine(pen, x, y, point1, point1);
 
                             }
                             else
                             {
                                 int.TryParse(split[1], out point1);
                                 int.TryParse(split[2], out point2);
-                                g.DrawLine(pen, x, y, point1, point2);
+                                graph.DrawLine(pen, x, y, point1, point2);
 
                             }
                             break;
@@ -288,7 +291,7 @@ namespace ASE_Part_2
                             brushcolor = Color.FromArgb(random.Next(256), random.Next(256), random.Next(256));
                             penColor = Color.Black;
 
-                            Design1 = designFactory.getDesign(split[1]);
+                            Design1 = designFactory.GetDesign(split[1]);
                             if (split[1].ToLower().Trim() == "circle")
                             {
                                 radius = random.Next(Size.Width / 4);
@@ -871,6 +874,80 @@ namespace ASE_Part_2
         }
 
         private void runButton_Click(object sender, EventArgs e)
+        {
+            String input = ControlePanel.Text;
+            if (input.Trim() == "")
+            {
+                MessageBox.Show("Enter a command", "ERROR");
+
+            }
+            else
+            {
+                String[] line;
+                String[] lines;
+                ArrayList Currentline = new ArrayList();
+                int i = 0;
+                lines = ControlePanel.Lines.ToArray();
+                while (lines.Length != i)
+                {
+
+                    line = lines[i].Split(' ');
+                    Currentline.Add(line);
+                    i++;
+                }
+                int length = lines.Length;
+
+                Check(Currentline, lines, length);
+                int L = 0;
+                Array.Clear(parmerter, 0, parmerter.Length);//used to cleare the vars array befreo exicution
+                Array.Clear(stringSplit, 0, stringSplit.Length);
+                string errors = string.Join(", ", stringError.Where(x => x != 0));
+
+
+                if (conditionFlag == false)
+                {
+
+                    MessageBox.Show("Error Occur in Line no. :" + errors + ".", "error");
+                }
+                else
+                {
+
+                    excecuteCommand(Currentline, lines, length);
+                }
+
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ControlePanel.Text = "";
+            commandline.Text = "";
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            MemoryStream userInput = new MemoryStream(Encoding.UTF8.GetBytes(ControlePanel.Text));
+
+            SaveFileDialog save = new SaveFileDialog();
+            save.DefaultExt = "txt";
+            save.Filter = "Text files (.txt)|.txt|All files (.)|.";
+            DialogResult result = save.ShowDialog();
+            Stream fileStream;
+
+            if (result == DialogResult.OK)
+            {
+
+                fileStream = save.OpenFile();
+                userInput.Position = 0;
+                userInput.WriteTo(fileStream);
+                fileStream.Close();
+                userInput.Close();
+
+            }
+            save.Dispose();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }

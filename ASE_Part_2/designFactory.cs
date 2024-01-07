@@ -8,7 +8,7 @@ namespace ASE_Part_2
 {
     public class designFactory
     {
-        public Design getDesign(String DesignType)
+        public Design GetDesign(String DesignType)
         {
             DesignType = DesignType.ToLower().Trim();
 
