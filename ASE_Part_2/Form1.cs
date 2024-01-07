@@ -10,6 +10,9 @@ using System.Windows.Forms;
 
 namespace ASE_Part_2
 {
+    /// <summary>
+    /// Represents the main form of the application.
+    /// </summary>
     public partial class Form1 : Form
     {
         private int x = 0, y = 0;
@@ -46,11 +49,21 @@ namespace ASE_Part_2
 
         public object ControlePanel { get; private set; }
 
+        /// <summary>
+        /// Initializes a new instance of the Form1 class.
+        /// </summary>
         public Form1()
         {
             InitializeComponent();
             display.Image = new Bitmap(Size.Width, Size.Height);
         }
+
+        /// <summary>
+        /// Executes a command based on provided parameters.
+        /// </summary>
+        /// <param name="Currentline">ArrayList containing the current line.</param>
+        /// <param name="lines">Array of strings containing lines.</param>
+        /// <param name="linecount">Count of lines.</param>
         public void excecuteCommand(ArrayList Currentline, string[] lines, int linecount)
         {
 
@@ -58,15 +71,17 @@ namespace ASE_Part_2
             int counter = 0;
             int jump = 0;
 
-
+            // Begin the loop that iterates through the lines of the code
             while (lines.Length >= counter)
             {
+                // Initialize graphics, pen, and brush objects for drawing
                 Graphics graph = Graphics.FromImage(display.Image);
                 Pen pen = new Pen(penColor, 2);
                 Brush brush = new SolidBrush(brushcolor);
 
                 try
                 {
+                    // Check for 'jump' and adjust the counter
                     if (jump != 0)
                     {
                         if (jump == counter)
@@ -78,11 +93,11 @@ namespace ASE_Part_2
 
                     split = (string[])Currentline[counter];
 
-
+                    // Switch statement to handle different commands
                     switch (split[0].ToLower())
                     {
+                        // Individual cases for different drawing commands and operations
                         case "circle":
-
                             int radius;
                             if (!int.TryParse(split[1], out radius))
                             {
@@ -429,13 +444,8 @@ namespace ASE_Part_2
                 }
                 pen.Dispose();
                 brush.Dispose();
-
-
                 counter++;
             }
-
-
-
         }
         private bool ifcheck(int left, string condition, int right) // used to check if sattment 
         {

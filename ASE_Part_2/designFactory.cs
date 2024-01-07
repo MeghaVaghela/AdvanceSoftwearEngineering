@@ -6,8 +6,18 @@ using System.Threading.Tasks;
 
 namespace ASE_Part_2
 {
+
+    /// <summary>
+    /// Represents a factory class to create different designs based on specified types.
+    /// </summary>
     public class designFactory
     {
+
+        /// <summary>
+        /// Gets the specific design object based on the provided DesignType.
+        /// </summary>
+        /// <param name="DesignType">Type of design to be created.</param>
+        /// <returns>A Design object based on the specified type.</returns>
         public Design GetDesign(String DesignType)
         {
             DesignType = DesignType.ToLower().Trim();
@@ -30,9 +40,9 @@ namespace ASE_Part_2
             }
             else
             {
+                // If the provided DesignType is not recognized, throw an ArgumentException.
                 System.ArgumentException argumentException = new System.ArgumentException("Factory Exception occur :" + DesignType + " is not available");
             }
         }
     }
 }
-;
