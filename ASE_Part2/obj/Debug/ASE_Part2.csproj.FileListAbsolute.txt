@@ -1,0 +1,10 @@
+C:\Users\megha\source\repos\AdvanceSoftwearEngineering\ASE_Part2\bin\Debug\ASE_Part2.exe.config
+C:\Users\megha\source\repos\AdvanceSoftwearEngineering\ASE_Part2\bin\Debug\ASE_Part2.exe
+C:\Users\megha\source\repos\AdvanceSoftwearEngineering\ASE_Part2\bin\Debug\ASE_Part2.pdb
+C:\Users\megha\source\repos\AdvanceSoftwearEngineering\ASE_Part2\obj\Debug\ASE_Part2.csproj.AssemblyReference.cache
+C:\Users\megha\source\repos\AdvanceSoftwearEngineering\ASE_Part2\obj\Debug\ASE_Part2.Form1.resources
+C:\Users\megha\source\repos\AdvanceSoftwearEngineering\ASE_Part2\obj\Debug\ASE_Part2.Properties.Resources.resources
+C:\Users\megha\source\repos\AdvanceSoftwearEngineering\ASE_Part2\obj\Debug\ASE_Part2.csproj.GenerateResource.cache
+C:\Users\megha\source\repos\AdvanceSoftwearEngineering\ASE_Part2\obj\Debug\ASE_Part2.csproj.CoreCompileInputs.cache
+C:\Users\megha\source\repos\AdvanceSoftwearEngineering\ASE_Part2\obj\Debug\ASE_Part2.exe
+C:\Users\megha\source\repos\AdvanceSoftwearEngineering\ASE_Part2\obj\Debug\ASE_Part2.pdb

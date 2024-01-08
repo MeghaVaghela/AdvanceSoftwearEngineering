@@ -11,18 +11,25 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace AdvanceSoftware
 {
+    /// <summary>
+    /// The main form of the AdvanceSoftware application.
+    /// </summary>
     public partial class Form1 : Form
     {
 
-        DesignControl d;
+        DesignControl d; // Instance of the DesignControl class
 
+
+        /// <summary>
+        /// Constructor for Form1.
+        /// </summary>
         public Form1()
         {
             InitializeComponent();
-            DesignValues.x = DesignValues.y = 0;
-            d = new DesignControl();
-            d.Current_Point(false);
-            Refresh();
+            DesignValues.x = DesignValues.y = 0; // Initializing DesignValues
+            d = new DesignControl(); // Initializing DesignControl instance
+            d.Current_Point(false); // Setting the current point
+            Refresh(); // Refreshing the form
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -34,7 +41,7 @@ namespace AdvanceSoftware
         {
 
         }
-
+        
         private void Button1_Click(object sender, EventArgs e)
         {
           
@@ -88,7 +95,9 @@ namespace AdvanceSoftware
             d.Current_Point(true);
             Refresh();
         }
-
+        /// <summary>
+        /// Overrides the Refresh method to update the pictureBox image.
+        /// </summary>
         public override void Refresh()
         {
             pictureBox1.Image = DesignValues.newPic;
@@ -119,6 +128,9 @@ namespace AdvanceSoftware
             Refresh();
         }
 
+        /// <summary>
+        /// Handles the click event for button4 to save the image as a JPEG file.
+        /// </summary>
         private void button4_Click(object sender, EventArgs e)
         {
             SaveFileDialog save = new SaveFileDialog();

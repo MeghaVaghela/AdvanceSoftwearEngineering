@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  
+	<Project Sdk="Microsoft.NET.Sdk">
+
+		<PropertyGroup>
+			<TargetFrameworks>net48;net6.0</TargetFrameworks>
+		</PropertyGroup>
+
+		<!-- Other configurations and references -->
+
+	</Project>
+
+
+</Project>

@@ -28,41 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            runButton = new Button();
-            button2 = new Button();
             button3 = new Button();
+            button2 = new Button();
+            runButton = new Button();
             button4 = new Button();
-            commandline = new TextBox();
-            groupBox1 = new GroupBox();
-            ControlePanel = new RichTextBox();
-            groupBox2 = new GroupBox();
             display = new PictureBox();
+            groupBox2 = new GroupBox();
+            commandline = new TextBox();
             groupBox3 = new GroupBox();
-            groupBox1.SuspendLayout();
-            groupBox2.SuspendLayout();
+            ControlePanel = new RichTextBox();
+            groupBox1 = new GroupBox();
             ((System.ComponentModel.ISupportInitialize)display).BeginInit();
+            groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
+            groupBox1.SuspendLayout();
             SuspendLayout();
-            // 
-            // runButton
-            // 
-            runButton.Location = new Point(48, 494);
-            runButton.Name = "runButton";
-            runButton.Size = new Size(128, 29);
-            runButton.TabIndex = 0;
-            runButton.Text = "Run";
-            runButton.UseVisualStyleBackColor = true;
-            runButton.Click += runButton_Click;
-            // 
-            // button2
-            // 
-            button2.Location = new Point(281, 494);
-            button2.Name = "button2";
-            button2.Size = new Size(135, 29);
-            button2.TabIndex = 1;
-            button2.Text = "Clear";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
             // 
             // button3
             // 
@@ -74,6 +54,26 @@
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
             // 
+            // button2
+            // 
+            button2.Location = new Point(281, 494);
+            button2.Name = "button2";
+            button2.Size = new Size(135, 29);
+            button2.TabIndex = 1;
+            button2.Text = "Clear";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
+            // runButton
+            // 
+            runButton.Location = new Point(48, 494);
+            runButton.Name = "runButton";
+            runButton.Size = new Size(128, 29);
+            runButton.TabIndex = 0;
+            runButton.Text = "Run";
+            runButton.UseVisualStyleBackColor = true;
+            runButton.Click += runButton_Click;
+            // 
             // button4
             // 
             button4.Location = new Point(281, 553);
@@ -84,32 +84,14 @@
             button4.UseVisualStyleBackColor = true;
             button4.Click += button4_Click;
             // 
-            // commandline
+            // display
             // 
-            commandline.Location = new Point(6, 26);
-            commandline.Name = "commandline";
-            commandline.Size = new Size(437, 27);
-            commandline.TabIndex = 4;
-            commandline.TextChanged += textBox1_TextChanged;
-            // 
-            // groupBox1
-            // 
-            groupBox1.Controls.Add(ControlePanel);
-            groupBox1.Location = new Point(12, 12);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(455, 409);
-            groupBox1.TabIndex = 7;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "MultiCommand";
-            // 
-            // ControlePanel
-            // 
-            ControlePanel.Location = new Point(7, 28);
-            ControlePanel.Name = "ControlePanel";
-            ControlePanel.Size = new Size(442, 375);
-            ControlePanel.TabIndex = 0;
-            ControlePanel.Text = "";
-            ControlePanel.TextChanged += ControlePanel_TextChanged;
+            display.Location = new Point(6, 26);
+            display.Name = "display";
+            display.Size = new Size(486, 561);
+            display.TabIndex = 0;
+            display.TabStop = false;
+            display.Click += display_Click;
             // 
             // groupBox2
             // 
@@ -122,14 +104,13 @@
             groupBox2.Text = "Drawing Area";
             groupBox2.Enter += groupBox2_Enter;
             // 
-            // display
+            // commandline
             // 
-            display.Location = new Point(6, 26);
-            display.Name = "display";
-            display.Size = new Size(486, 561);
-            display.TabIndex = 0;
-            display.TabStop = false;
-            display.Click += display_Click;
+            commandline.Location = new Point(6, 26);
+            commandline.Name = "commandline";
+            commandline.Size = new Size(437, 27);
+            commandline.TabIndex = 4;
+            commandline.TextChanged += textBox1_TextChanged;
             // 
             // groupBox3
             // 
@@ -140,6 +121,25 @@
             groupBox3.TabIndex = 9;
             groupBox3.TabStop = false;
             groupBox3.Text = "single line command";
+            // 
+            // ControlePanel
+            // 
+            ControlePanel.Location = new Point(7, 28);
+            ControlePanel.Name = "ControlePanel";
+            ControlePanel.Size = new Size(442, 375);
+            ControlePanel.TabIndex = 0;
+            ControlePanel.Text = "";
+            ControlePanel.TextChanged += ControlePanel_TextChanged;
+            // 
+            // groupBox1
+            // 
+            groupBox1.Controls.Add(ControlePanel);
+            groupBox1.Location = new Point(12, 12);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(455, 409);
+            groupBox1.TabIndex = 7;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "MultiCommand";
             // 
             // Form1
             // 
@@ -157,25 +157,25 @@
             Name = "Form1";
             Text = "ASE_Assingment_2";
             Load += Form1_Load;
-            groupBox1.ResumeLayout(false);
-            groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)display).EndInit();
+            groupBox2.ResumeLayout(false);
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();
+            groupBox1.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Button runButton;
-        private Button button2;
         private Button button3;
+        private Button button2;
+        private Button runButton;
         private Button button4;
-        private TextBox commandline;
-        private GroupBox groupBox1;
-        private GroupBox groupBox2;
-        private GroupBox groupBox3;
         private PictureBox display;
+        private GroupBox groupBox2;
+        private TextBox commandline;
+        private GroupBox groupBox3;
         private RichTextBox ControlePanel;
+        private GroupBox groupBox1;
     }
 }

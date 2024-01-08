@@ -9,3 +9,5 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = AdvanceSoftwearEngineering
 build_property.ProjectDir = C:\Users\megha\source\repos\AdvanceSoftwearEngineering\AdvanceSoftwearEngineering\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
