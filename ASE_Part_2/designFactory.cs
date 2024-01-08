@@ -22,15 +22,15 @@ namespace ASE_Part_2
         {
             DesignType = DesignType.ToLower().Trim();
 
-            if(DesignType.Equals("circle"))
+            if (DesignType.Equals("circle"))
             {
                 return new drawCircle();
             }
-            else if(DesignType.Equals("square"))
+            else if (DesignType.Equals("square"))
             {
                 return new drawSquare();
             }
-            else if(DesignType.Equals("triangle"))
+            else if (DesignType.Equals("triangle"))
             {
                 return new drawTriangle();
             }
@@ -41,8 +41,9 @@ namespace ASE_Part_2
             else
             {
                 // If the provided DesignType is not recognized, throw an ArgumentException.
-                System.ArgumentException argumentException = new System.ArgumentException("Factory Exception occur :" + DesignType + " is not available");
+                throw new System.ArgumentException("Factory Exception occur: " + DesignType + " is not available");
             }
         }
+
     }
 }

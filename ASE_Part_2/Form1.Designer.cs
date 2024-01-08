@@ -32,15 +32,15 @@
             button2 = new Button();
             button3 = new Button();
             button4 = new Button();
-            textBox1 = new TextBox();
-            richTextBox1 = new RichTextBox();
-            pictureBox1 = new PictureBox();
+            commandline = new TextBox();
             groupBox1 = new GroupBox();
+            ControlePanel = new RichTextBox();
             groupBox2 = new GroupBox();
+            display = new PictureBox();
             groupBox3 = new GroupBox();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)display).BeginInit();
             groupBox3.SuspendLayout();
             SuspendLayout();
             // 
@@ -84,37 +84,17 @@
             button4.UseVisualStyleBackColor = true;
             button4.Click += button4_Click;
             // 
-            // textBox1
+            // commandline
             // 
-            textBox1.Location = new Point(6, 26);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(437, 27);
-            textBox1.TabIndex = 4;
-            textBox1.TextChanged += textBox1_TextChanged;
-            // 
-            // richTextBox1
-            // 
-            richTextBox1.BackColor = SystemColors.GradientInactiveCaption;
-            richTextBox1.Location = new Point(6, 26);
-            richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(443, 377);
-            richTextBox1.TabIndex = 5;
-            richTextBox1.Text = "";
-            richTextBox1.TextChanged += richTextBox1_TextChanged;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.BackColor = SystemColors.ButtonFace;
-            pictureBox1.Location = new Point(6, 25);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(486, 561);
-            pictureBox1.TabIndex = 6;
-            pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
+            commandline.Location = new Point(6, 26);
+            commandline.Name = "commandline";
+            commandline.Size = new Size(437, 27);
+            commandline.TabIndex = 4;
+            commandline.TextChanged += textBox1_TextChanged;
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(richTextBox1);
+            groupBox1.Controls.Add(ControlePanel);
             groupBox1.Location = new Point(12, 12);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(455, 409);
@@ -122,9 +102,18 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "MultiCommand";
             // 
+            // ControlePanel
+            // 
+            ControlePanel.Location = new Point(7, 28);
+            ControlePanel.Name = "ControlePanel";
+            ControlePanel.Size = new Size(442, 375);
+            ControlePanel.TabIndex = 0;
+            ControlePanel.Text = "";
+            ControlePanel.TextChanged += ControlePanel_TextChanged;
+            // 
             // groupBox2
             // 
-            groupBox2.Controls.Add(pictureBox1);
+            groupBox2.Controls.Add(display);
             groupBox2.Location = new Point(482, 13);
             groupBox2.Name = "groupBox2";
             groupBox2.Size = new Size(498, 593);
@@ -133,9 +122,18 @@
             groupBox2.Text = "Drawing Area";
             groupBox2.Enter += groupBox2_Enter;
             // 
+            // display
+            // 
+            display.Location = new Point(6, 26);
+            display.Name = "display";
+            display.Size = new Size(486, 561);
+            display.TabIndex = 0;
+            display.TabStop = false;
+            display.Click += display_Click;
+            // 
             // groupBox3
             // 
-            groupBox3.Controls.Add(textBox1);
+            groupBox3.Controls.Add(commandline);
             groupBox3.Location = new Point(18, 428);
             groupBox3.Name = "groupBox3";
             groupBox3.Size = new Size(449, 60);
@@ -159,9 +157,9 @@
             Name = "Form1";
             Text = "ASE_Assingment_2";
             Load += Form1_Load;
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)display).EndInit();
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();
             ResumeLayout(false);
@@ -173,11 +171,11 @@
         private Button button2;
         private Button button3;
         private Button button4;
-        private TextBox textBox1;
-        private RichTextBox richTextBox1;
-        private PictureBox pictureBox1;
+        private TextBox commandline;
         private GroupBox groupBox1;
         private GroupBox groupBox2;
         private GroupBox groupBox3;
+        private PictureBox display;
+        private RichTextBox ControlePanel;
     }
 }

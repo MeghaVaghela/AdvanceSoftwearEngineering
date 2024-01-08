@@ -44,10 +44,8 @@ namespace ASE_Part_2
         //Design Factory
         private Design Design1;
         private designFactory designFactory = new designFactory();
-        private object display;
-        private object commandline;
 
-        public object ControlePanel { get; private set; }
+
 
         /// <summary>
         /// Initializes a new instance of the Form1 class.
@@ -64,10 +62,10 @@ namespace ASE_Part_2
         /// <param name="Currentline">ArrayList containing the current line.</param>
         /// <param name="lines">Array of strings containing lines.</param>
         /// <param name="linecount">Count of lines.</param>
+
+
         public void excecuteCommand(ArrayList Currentline, string[] lines, int linecount)
         {
-
-
             int counter = 0;
             int jump = 0;
 
@@ -90,7 +88,6 @@ namespace ASE_Part_2
                             jump = 0;
                         }
                     }
-
                     split = (string[])Currentline[counter];
 
                     // Switch statement to handle different commands
@@ -296,11 +293,8 @@ namespace ASE_Part_2
                             {
                                 counter = loopStart;
                             }
-
-
                             break;
                         case "num":
-
                             x = random.Next(display.Width);
                             y = random.Next(display.Height);
                             brushcolor = Color.FromArgb(random.Next(256), random.Next(256), random.Next(256));
@@ -367,30 +361,18 @@ namespace ASE_Part_2
                                     jump = counter;
                                     jump++;
                                     jump++;
-
-
-
                                     break;
                                 }
                                 else
                                 {
-
                                     counter++;
-
                                 }
-
-
-
-
                             }
-
                             break;
                         case "endif":
                             jump = 0;
                             stringIf = false;
                             break;
-
-
                         default:
                             if (split[0].Trim() == null)
                             {
@@ -430,14 +412,12 @@ namespace ASE_Part_2
                                 }
                             }
                             break;
-
                     }
                     if (FirstBit == true)
                     {
                         loopCount++;
                     }
-                    display.Referesh();
-
+                    display.Refresh();
                 }
                 catch
                 {
@@ -451,7 +431,6 @@ namespace ASE_Part_2
         {
             switch (condition)
             {
-
                 case "=":
                     if (left == right)
                     {
@@ -507,49 +486,52 @@ namespace ASE_Part_2
         }
         private void VarCheck(string element1, string element2) //used to check if the var is set if not to set it or re set it 
         {
-            int i = 0;
             try
             {
-                if (parmerter[0] == null && stringSplit[0] == 0)  // arrays max is [49];
+                bool variableExists = false;
+                int index = 0;
+
+                // Check if the variable already exists
+                while (index < parmerter.Length && parmerter[index] != null)
                 {
-                    parmerter[0] = element1;//name 
-                    int.TryParse(element2, out stringSplit[0]);//value
+                    if (parmerter[index].Equals(element1))
+                    {
+                        variableExists = true;
+                        break;
+                    }
+                    index++;
+                }
+
+                if (variableExists)
+                {
+                    MessageBox.Show("Variable already declared", "Error");
                 }
                 else
                 {
-                    while (49 >= i)
+                    // Find an empty slot or the first null element
+                    index = 0;
+                    while (index < parmerter.Length && parmerter[index] != null)
                     {
-                        if (parmerter[i].Equals(element1))//if names are the same
-                        {
-                            if (stringSplit[i].Equals(element2))
-                            {
-                                MessageBox.Show("Variable already decleard", "Error");
+                        index++;
+                    }
 
-                                i = parmerter.Length;
-                            }
-                            else
-                            {
-                                i++;
-                            }
-                        }
-                        else if (i >= parmerter.Length)
-                        {
-                            i++;
-                        }
-                        else
-                        {
-                            parmerter[i++] = element1;
-                            int.TryParse(element2, out stringSplit[i]);
-
-                        }
+                    if (index < parmerter.Length)
+                    {
+                        parmerter[index] = element1;
+                        int.TryParse(element2, out stringSplit[index]);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Reached maximum variable limit", "Error");
                     }
                 }
-
             }
-            catch
+            catch (Exception ex)
             {
-
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error");
             }
+
+
 
         }
         private int varCall(string variable)
@@ -575,7 +557,6 @@ namespace ASE_Part_2
                 MessageBox.Show("not a variable", "error");
             }
             return number;
-
         }
 
         private void Commandline_KeyDown(object sender, KeyEventArgs e) //used to run the program
@@ -634,13 +615,10 @@ namespace ASE_Part_2
 
                         excecuteCommand(Currentline, lines, length);
                     }
-
-
                 }
             }
-
-
         }
+
         public void Check(ArrayList currentline, string[] lines, int length)// checks the syntax of the user input
         {
             int count = 0;
@@ -649,7 +627,6 @@ namespace ASE_Part_2
             conditionFlag = true;
             int k = 0;
             int linenumber = 0;
-
 
             while (lines.Length >= count)
             {
@@ -822,8 +799,6 @@ namespace ASE_Part_2
                                 }
                             }
                             break;
-
-
                     }
                     if (errors != errorCount)
                     {
@@ -958,6 +933,16 @@ namespace ASE_Part_2
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void display_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ControlePanel_TextChanged(object sender, EventArgs e)
         {
 
         }
