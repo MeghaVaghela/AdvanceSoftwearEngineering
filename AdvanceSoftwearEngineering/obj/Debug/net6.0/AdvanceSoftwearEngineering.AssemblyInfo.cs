@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AdvanceSoftwearEngineering")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+76eb29d039232f37d9fe1173f0d3de73a355b9bc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("AdvanceSoftwearEngineering")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AdvanceSoftwearEngineering")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
