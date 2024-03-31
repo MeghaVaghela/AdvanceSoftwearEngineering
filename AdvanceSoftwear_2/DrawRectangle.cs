@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Drawing;
+
 
 namespace AdvanceSoftwear_2
 {
-    internal class DrawRectangle
+    public class DrawRectangle:Shape
     {
         private int width;
         private int height;
@@ -21,11 +18,11 @@ namespace AdvanceSoftwear_2
         public DrawRectangle() { }
 
         
-        public override void set(params int[] list)
+        public override void set(params int[] items)
         {
-            base.set(list[0], list[1]);
-            this.width = list[2];
-            this.height = list[3];
+            base.set(items[0], items[1]);
+            this.width = items[2];
+            this.height = items[3];
         }
 
         

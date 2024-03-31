@@ -1,48 +1,41 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Drawing;
 
 namespace AdvanceSoftwear_2
 {
-    internal class DrawCircle
+    public class DrawCircle:Shape
     {
-        int diameter;
+       private int diameter;
 
-        public DrawCircle(int diameter)
+        //public DrawCircle(int diameter)
+        //{
+        //    this.diameter = diameter;
+        //}
+
+        public DrawCircle(int x, int y, int diameter) : base(x, y)
         {
             this.diameter = diameter;
         }
 
-        public DrawCircle(int x, int y, int diameter):base(x, y)
-        {
-            this.diameter = diameter;
-        }
-
-        public int Diameter
-        {
-            get { return diameter; }
-            set { diameter = value; }
-        }
+    //public int Diameter
+    //{
+    //    get { return diameter; }
+    //    set { diameter = value; }
+    //}
+    public DrawCircle() : base()
+        { }
         public override void Draw(Graphics graph, Pen pen, Brush brush)
         {
-            graph.FillEllipse(brush, X, Y, diameter * 2, diameter * 2);
-            graph.DrawEllipse(pen, X, Y, diameter * 2, diameter * 2);
+            graph.FillEllipse(brush, x, y, diameter * 2, diameter * 2);
+            graph.DrawEllipse(pen, x, y, diameter * 2, diameter * 2);
         }
-        public override void Set(params int[] list)
+        public override void set(params int[] list)
         {
-            base.Set(list[0], list[1]);
+            base.set(list[0], list[1]);
             if (list.Length >= 3)
             {
                 diameter = list[2];
             }
         }
-        public override string ToString()
-        {
-            return base.ToString() + " " + diameter;
-        }
+        
     }
 }

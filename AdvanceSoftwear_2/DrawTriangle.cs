@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Drawing;
 
 namespace AdvanceSoftwear_2
 {
-    internal class DrawTriangle
+    public class DrawTriangle:Shape
     {
         private Point[] point;
 
