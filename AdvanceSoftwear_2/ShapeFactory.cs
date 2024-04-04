@@ -2,8 +2,14 @@
 
 namespace AdvanceSoftwear_2
 {
+    /// <summary>
+    /// Represents a factory class for creating instances of different shapes.
+    /// </summary>
     public class ShapeFactory
     {
+        /// <summary>
+        /// Gets the shape based on the specified shape type.
+        /// </summary>
         public Shape GetShape(String ShapeType)
         {
             ShapeType = ShapeType.ToLower().Trim();

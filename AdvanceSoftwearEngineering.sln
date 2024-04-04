@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASE_Part2", "ASE_Part2\ASE_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdvanceSoftwear_2", "AdvanceSoftwear_2\AdvanceSoftwear_2.csproj", "{BDF78C15-687B-4428-90F2-923220B07F87}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTesting_Part_2", "UnitTesting_Part_2\UnitTesting_Part_2.csproj", "{21A466EC-3F9C-4670-83A8-4B10DC5EC813}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{BDF78C15-687B-4428-90F2-923220B07F87}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BDF78C15-687B-4428-90F2-923220B07F87}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BDF78C15-687B-4428-90F2-923220B07F87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21A466EC-3F9C-4670-83A8-4B10DC5EC813}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21A466EC-3F9C-4670-83A8-4B10DC5EC813}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21A466EC-3F9C-4670-83A8-4B10DC5EC813}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21A466EC-3F9C-4670-83A8-4B10DC5EC813}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

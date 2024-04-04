@@ -31,13 +31,13 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.DisplayShape = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.MultiCommand = new System.Windows.Forms.RichTextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.SingleCommnad = new System.Windows.Forms.TextBox();
             this.Run = new System.Windows.Forms.Button();
             this.Clear = new System.Windows.Forms.Button();
             this.Save = new System.Windows.Forms.Button();
             this.Load = new System.Windows.Forms.Button();
-            this.MultiCommand = new System.Windows.Forms.RichTextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DisplayShape)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -52,7 +52,7 @@
             this.groupBox1.Size = new System.Drawing.Size(452, 584);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.groupBox1.Text = "Shape Display";
             // 
             // DisplayShape
             // 
@@ -71,6 +71,14 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Multiple Command";
+            // 
+            // MultiCommand
+            // 
+            this.MultiCommand.Location = new System.Drawing.Point(6, 21);
+            this.MultiCommand.Name = "MultiCommand";
+            this.MultiCommand.Size = new System.Drawing.Size(376, 367);
+            this.MultiCommand.TabIndex = 0;
+            this.MultiCommand.Text = "";
             // 
             // groupBox3
             // 
@@ -92,54 +100,50 @@
             // 
             // Run
             // 
-            this.Run.Location = new System.Drawing.Point(43, 493);
+            this.Run.Location = new System.Drawing.Point(18, 493);
             this.Run.Name = "Run";
-            this.Run.Size = new System.Drawing.Size(112, 39);
+            this.Run.Size = new System.Drawing.Size(137, 39);
             this.Run.TabIndex = 2;
             this.Run.Text = "Run";
             this.Run.UseVisualStyleBackColor = true;
+            this.Run.Click += new System.EventHandler(this.Run_Click);
             // 
             // Clear
             // 
             this.Clear.CausesValidation = false;
-            this.Clear.Location = new System.Drawing.Point(243, 493);
+            this.Clear.Location = new System.Drawing.Point(221, 493);
             this.Clear.Name = "Clear";
-            this.Clear.Size = new System.Drawing.Size(112, 39);
+            this.Clear.Size = new System.Drawing.Size(134, 39);
             this.Clear.TabIndex = 3;
             this.Clear.Text = "Clear";
             this.Clear.UseVisualStyleBackColor = true;
+            this.Clear.Click += new System.EventHandler(this.Clear_Click);
             // 
             // Save
             // 
-            this.Save.Location = new System.Drawing.Point(43, 547);
+            this.Save.Location = new System.Drawing.Point(18, 547);
             this.Save.Name = "Save";
-            this.Save.Size = new System.Drawing.Size(112, 39);
+            this.Save.Size = new System.Drawing.Size(137, 39);
             this.Save.TabIndex = 4;
             this.Save.Text = "Save";
             this.Save.UseVisualStyleBackColor = true;
+            this.Save.Click += new System.EventHandler(this.Save_Click);
             // 
             // Load
             // 
-            this.Load.Location = new System.Drawing.Point(243, 547);
+            this.Load.Location = new System.Drawing.Point(221, 547);
             this.Load.Name = "Load";
-            this.Load.Size = new System.Drawing.Size(112, 39);
+            this.Load.Size = new System.Drawing.Size(134, 39);
             this.Load.TabIndex = 5;
             this.Load.Text = "Load";
             this.Load.UseVisualStyleBackColor = true;
-            // 
-            // MultiCommand
-            // 
-            this.MultiCommand.Location = new System.Drawing.Point(6, 21);
-            this.MultiCommand.Name = "MultiCommand";
-            this.MultiCommand.Size = new System.Drawing.Size(376, 367);
-            this.MultiCommand.TabIndex = 0;
-            this.MultiCommand.Text = "";
+            this.Load.Click += new System.EventHandler(this.Load_Click);
             // 
             // ShapeApplication
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(880, 608);
+            this.ClientSize = new System.Drawing.Size(860, 608);
             this.Controls.Add(this.Load);
             this.Controls.Add(this.Save);
             this.Controls.Add(this.Clear);
@@ -166,7 +170,7 @@
         private System.Windows.Forms.Button Run;
         private System.Windows.Forms.Button Clear;
         private System.Windows.Forms.Button Save;
-        private System.Windows.Forms.Button Load;
+        private new System.Windows.Forms.Button Load;
         private System.Windows.Forms.PictureBox DisplayShape;
         private System.Windows.Forms.TextBox SingleCommnad;
         private System.Windows.Forms.RichTextBox MultiCommand;
